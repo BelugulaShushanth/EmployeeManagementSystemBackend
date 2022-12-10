@@ -4,7 +4,9 @@ pipeline{
     stages{
         stage('Pre Build'){
             steps{
-                ${env.JOB_NAME} = "Build: "+$(env.JOB_NAME)
+                script{
+                    ${env.BUILD_NUMBER} = "Build: "+$(env.BUILD_NUMBER)
+                }
                 echo "JOB_NAME: ${env.JOB_NAME}"
             }
         }

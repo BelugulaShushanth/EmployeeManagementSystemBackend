@@ -2,8 +2,9 @@ pipeline{
     agent any
 
     stages{
-        stage('Pre BUild'){
+        stage('Pre Build'){
             steps{
+                ${env.JOB_NAME} = "Build: "+$(env.JOB_NAME)
                 echo "JOB_NAME: ${env.JOB_NAME}"
             }
         }

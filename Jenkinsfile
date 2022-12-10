@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Pre BUild'){
             steps{
-                sh 'echo ${env.JOB_NAME}'
+                echo "JOB_NAME: ${env.JOB_NAME}"
             }
         }
         stage('Compile & Build Stage'){

@@ -8,7 +8,7 @@ pipeline{
                     env.BUILD_NUMBER = "Build: "+ env.BUILD_NUMBER
                 }
                 echo "JOB_NAME: ${env.JOB_NAME}"
-                ech "BUILD_ID: ${env.BUILD_NUMBER}"
+                echo "BUILD_ID: ${env.BUILD_NUMBER}"
             }
         }
         stage('Compile & Build Stage'){

@@ -5,9 +5,10 @@ pipeline{
         stage('Pre Build'){
             steps{
                 script{
-                    env.BUILD_NUMBER = "Build: "+ env.BUILD_NUMBER
+                    env.BUILD_ID = "Build: "+ env.BUILD_ID
                 }
                 echo "JOB_NAME: ${env.JOB_NAME}"
+                ech "BUILD_ID: ${env.BUILD_ID}"
             }
         }
         stage('Compile & Build Stage'){

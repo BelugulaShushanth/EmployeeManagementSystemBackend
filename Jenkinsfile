@@ -2,6 +2,11 @@ pipeline{
     agent any
 
     stages{
+        stage('Pre BUild'){
+            steps{
+                sh 'echo ${env.JOB_NAME}'
+            }
+        }
         stage('Compile & Build Stage'){
             steps{
                 withMaven(maven: 'maven_3.8.6'){
